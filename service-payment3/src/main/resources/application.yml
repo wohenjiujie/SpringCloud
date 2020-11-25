@@ -1,0 +1,17 @@
+server:
+  port: 8003
+
+spring:
+  application:
+    name: com.invo.payment.service-payment
+  cloud:
+#    zookeeper:
+#      connect-string: 122.51.33.98:2181
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        hostname: 127.0.0.1
+        service-name: ${spring.application.name}
+        prefer-ip-address: true
+

@@ -1,18 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.invo.payment.dao.PaymentDao">
 
-    <insert id="create" parameterType="Payment" useGeneratedKeys="true" keyProperty="id">
+    <insert id="createPayment" parameterType="Payment" useGeneratedKeys="true" keyProperty="id">
     insert into payment(serial) values (#{serial});
 </insert>
 
     <select id="getPayment" parameterType="Long" resultMap="PaymentResultMap">
-        select * from payment where id=#{id};
+            select * from payment where id=#{id};
     </select>
 
-    <resultMap id="PaymentResultMap" type="com.invo.payment.entity.Payment">
+    <select id="getPaymentAll" resultMap="PaymentResultMap">
+                select * from payment;
+    </select>
+
+    <update id="updatePayment">
+  update payment set
+    serial = #{serial},
+  where id = #{id}
+</update>
+
+    <delete id="deletePayment">
+  delete from payment where id = #{id}
+</delete>
+
+    <resultMap id="PaymentResultMap" type="com.invo.api.entity.Payment">
         <id column="id" property="id" jdbcType="BIGINT" />
         <id column="serial" property="serial" jdbcType="VARCHAR" />
     </resultMap>

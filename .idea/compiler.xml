@@ -7,7 +7,14 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="common-api" />
+        <module name="service-order2" />
+        <module name="service-eureka2" />
+        <module name="service-order" />
+        <module name="service-payment3" />
+        <module name="service-payment2" />
         <module name="service-payment" />
+        <module name="service-eureka" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />

@@ -247,7 +247,7 @@ Verbatim text contained in list item 2, but not in sub-list item 2
 
   The labels of the items other than the first one are ignored. It is
   recommended to take the time to type the correct label for each item in
-  order to keep the APT source document readable.
+  com.invo.order to keep the APT source document readable.
 
 +-------------------------------------------+
       [Defined term 1] of definition list 2.
@@ -485,7 +485,7 @@ Table caption
 
   Text found after two tildes (<<<\~~>>>) is ignored up to the end of line.
 
-  A line of <<<~>>> is often used to ``underline'' section titles in order to
+  A line of <<<~>>> is often used to ``underline'' section titles in com.invo.order to
   make them stand out of other paragraphs.
 
 
