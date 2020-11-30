@@ -1,0 +1,6 @@
+/Users/invo/IntelliJIDEAProjects/SpringCloud/service-order-eureka/src/main/java/com/invo/order/loadbalance/impl/LoadBalancerImpl.java
+/Users/invo/IntelliJIDEAProjects/SpringCloud/service-order-eureka/src/main/java/com/invo/rule/RibbonRule.java
+/Users/invo/IntelliJIDEAProjects/SpringCloud/service-order-eureka/src/main/java/com/invo/order/ServiceOrderEurekaMain.java
+/Users/invo/IntelliJIDEAProjects/SpringCloud/service-order-eureka/src/main/java/com/invo/order/controller/OrderController.java
+/Users/invo/IntelliJIDEAProjects/SpringCloud/service-order-eureka/src/main/java/com/invo/order/loadbalance/LoadBalancer.java
+/Users/invo/IntelliJIDEAProjects/SpringCloud/service-order-eureka/src/main/java/com/invo/order/config/ApplicationContextConfig.java

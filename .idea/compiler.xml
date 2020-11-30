@@ -8,15 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="common-api" />
-        <module name="service-order2" />
+        <module name="service-order-eureka" />
         <module name="service-eureka2" />
-        <module name="service-order" />
+        <module name="service-order-openfeign" />
+        <module name="service-payment-eureka" />
         <module name="service-payment3" />
         <module name="service-payment2" />
-        <module name="service-payment" />
         <module name="service-eureka" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="8" />
+    <bytecodeTargetLevel target="8">
+      <module name="service-order2" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -10,11 +10,11 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>service-payment</module>
-        <module>service-payment2</module>
-        <module>service-payment3</module>
-        <module>service-order</module>
-        <module>service-order2</module>
+        <module>service-payment-eureka</module>
+        <module>service-payment-eureka2</module>
+        <module>service-payment-hystrix</module>
+        <module>service-order-eureka</module>
+        <module>service-order-openfeign</module>
         <module>common-api</module>
         <module>service-eureka</module>
         <module>service-eureka2</module>
