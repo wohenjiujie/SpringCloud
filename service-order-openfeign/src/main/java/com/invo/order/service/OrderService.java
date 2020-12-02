@@ -12,14 +12,15 @@ import org.springframework.web.bind.annotation.PathVariable;
  * on 2020/11/26.
  */
 @Component
+//@FeignClient(value = "com.invo.payment.service-payment-hystrix",fallback = OrderFallbackService.class)
 @FeignClient(value = "com.invo.payment.service-payment-hystrix")
 public interface OrderService {
 
     @GetMapping(value = "/payment/get/all")
-     CommonResult getPayment();
+    CommonResult getPayment();
 
     @GetMapping(value = "/payment/test")
-     String Test();
+    String Test();
 
     @GetMapping(value = "/payment/hystrix/ok/{id}")
     String paymentInfo_OK(@PathVariable("id") Integer id);

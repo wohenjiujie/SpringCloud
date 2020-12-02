@@ -36,4 +36,7 @@ logging:
   level:
 #    feign log 以指定级别监控指定接口
     com.invo.order.service.OrderService: debug
+feign:
+  hystrix:
+    enabled: true
 

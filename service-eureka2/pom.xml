@@ -12,6 +12,10 @@
     <artifactId>service-eureka2</artifactId>
     <dependencies>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.example</groupId>
             <artifactId>common-api</artifactId>
             <version>${project.version}</version>

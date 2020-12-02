@@ -4,6 +4,7 @@ package com.invo.order.controller;
 import com.invo.api.entity.CommonResult;
 import com.invo.order.service.OrderService;
 import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -35,6 +36,16 @@ public class OrderController {
     public String Test() {
         return orderService.Test();
     }
+
+    @GetMapping(value = "/consumer/bad/{id}")
+    @HystrixCommand
+    public String paymentInfo_Timeout(@PathVariable(value = "id") Integer id) {
+//        int error = 10 / 0;
+        String result = orderService.paymentInfo_Timeout(id);
+        log.info("****INvo For Result:" + result);
+        return result;
+    }
+
     @GetMapping(value = "/consumer/ok/{id}")
     public String paymentInfo_OK(@PathVariable(value = "id") Integer id) {
         String result = orderService.paymentInfo_OK(id);
@@ -42,14 +53,7 @@ public class OrderController {
         return result;
     }
 
-    @GetMapping(value = "/consumer/bad/{id}")
-    public String paymentInfo_Timeout(@PathVariable(value = "id") Integer id) {
-        String result = orderService.paymentInfo_Timeout(id);
-        log.info("****INvo For Result:" + result);
-        return result;
-    }
-
-    private String payment_Global_FallbackMethod() {
+    public String payment_Global_FallbackMethod() {
         return "Global Message: Order Error";
     }
 }

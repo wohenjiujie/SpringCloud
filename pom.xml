@@ -18,6 +18,7 @@
         <module>common-api</module>
         <module>service-eureka</module>
         <module>service-eureka2</module>
+        <module>service-dashboard-hystrix</module>
     </modules>
 
     <name>Maven</name>

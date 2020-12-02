@@ -14,7 +14,11 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.invo.api.entity
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 eureka:
   client:
     #true表示向注册中心EurekaServer注册自己,默认为true
