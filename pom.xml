@@ -19,6 +19,8 @@
         <module>service-eureka</module>
         <module>service-eureka2</module>
         <module>service-dashboard-hystrix</module>
+        <module>service-gateway-gateway</module>
+        <module>config-center</module>
     </modules>
 
     <name>Maven</name>

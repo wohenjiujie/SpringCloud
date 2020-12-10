@@ -1,0 +1,34 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: com.invo.gateway.service-gateway-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true  #开启从注册中心动态创建路由的功能，利用微服务名进行路由
+      routes:
+        - id: payment-route
+#          uri: http://localhost:8001
+          uri: lb://COM.INVO.PAYMENT.SERVICE-PAYMENT
+          predicates:
+            - Path=/payment/**
+            - After=2020-12-08T16:48:07.600+08:00[Asia/Shanghai]
+
+#        - id: payment-route2
+#          uri: http://localhost:8001
+#          predicates:
+#            - Path=/payment/discovery/**
+eureka:
+  client:
+    #true表示向注册中心EurekaServer注册自己,默认为true
+    register-with-eureka: true
+    #表示是否从EurekaServer抓取已有的注册信息，默认为true。
+    #单节点无所谓，但集群必须设置为才能配合ribbon使用负载均衡
+    fetch-registry: true
+    service-url:
+      #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址
+      #      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka
